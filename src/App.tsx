@@ -1,11 +1,4 @@
-type HeadingProps = {
-  title: string;
-};
-
-function Heading(props: HeadingProps) {
-  console.log('props ===', props);
-  return <h3>{props.title} visi</h3>;
-}
+import Heading from './components/Heading';
 
 function App() {
   return (
