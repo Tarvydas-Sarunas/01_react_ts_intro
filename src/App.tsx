@@ -9,6 +9,7 @@ import { PersonObj } from './components/PersonObj.type';
 import Status from './components/Status';
 import Container from './components/Container';
 import LoggedIn from './components/state/LoggedIn';
+import User from './components/state/User';
 
 function App() {
   const personObj: PersonObj = {
@@ -48,11 +49,12 @@ function App() {
       <h1 className='display-2'>React TS App</h1>
       {/* <Heading title='Sveiki' /> */}
 
-      <LoggedIn />
+      <User />
 
       {false && (
         <>
           <Grid>
+            <LoggedIn />
             <Heading size={5 || 3}>Dar vienas headingas</Heading>
             <Button
               onClick={(event, id) => {
