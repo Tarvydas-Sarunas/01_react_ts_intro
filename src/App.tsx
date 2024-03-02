@@ -1,3 +1,4 @@
+import Button from './components/Button';
 import Greet from './components/Greet';
 import Grid from './components/Grid';
 import Heading from './components/Heading';
@@ -6,6 +7,7 @@ import Person from './components/Person';
 import PersonList from './components/PersonList';
 import { PersonObj } from './components/PersonObj.type';
 import Status from './components/Status';
+import Container from './components/Container';
 
 function App() {
   const personObj: PersonObj = {
@@ -32,12 +34,21 @@ function App() {
     },
   ];
 
+  function printName(): void {
+    console.log('Hi my name is James');
+  }
+
+  function sum(sk1: number, sk2: number): number {
+    return sk1 + sk2;
+  }
+
   return (
-    <div className='container'>
+    <Container>
       <h1 className='display-2'>React TS App</h1>
       {/* <Heading title='Sveiki' /> */}
       <Grid>
-        <Heading>Dar vienas headingas</Heading>
+        <Heading size={4}>Dar vienas headingas</Heading>
+        <Button onClick={printName} sumuok={sum} />
         <Status status='success' />
       </Grid>
       {false && (
@@ -49,7 +60,7 @@ function App() {
           <Greet name='Mike' amaount={10_000_000} />
         </>
       )}
-    </div>
+    </Container>
   );
 }
 
