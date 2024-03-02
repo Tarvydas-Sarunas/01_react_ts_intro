@@ -47,8 +47,14 @@ function App() {
       <h1 className='display-2'>React TS App</h1>
       {/* <Heading title='Sveiki' /> */}
       <Grid>
-        <Heading size={4}>Dar vienas headingas</Heading>
-        <Button onClick={printName} sumuok={sum} />
+        <Heading size={5 || 3}>Dar vienas headingas</Heading>
+        <Button
+          onClick={(event, id) => {
+            console.log('event ===', event.currentTarget, id);
+            printName();
+          }}
+          sumuok={sum}
+        />
         <Status status='success' />
       </Grid>
       {false && (

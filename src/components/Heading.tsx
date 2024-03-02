@@ -5,7 +5,6 @@ type HeadingProps = {
 };
 
 export default function Heading(props: HeadingProps) {
-  const size = props.size ? props.size : 3;
   console.log('props ===', props);
-  return <h3 className={`fs-${size}`}>{props.children}</h3>;
+  return <h3 className={`fs-${props.size}`}>{props.children}</h3>;
 }
