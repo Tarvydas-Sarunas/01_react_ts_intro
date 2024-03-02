@@ -1,25 +1,30 @@
 import Greet from './components/Greet';
 import Heading from './components/Heading';
-import Person, { PersonProps } from './components/Person';
+import Person from './components/Person';
+
 import PersonList from './components/PersonList';
 import { PersonObj } from './components/PersonObj.type';
 
 function App() {
-  const personObj = {
+  const personObj: PersonObj = {
+    id: 50,
     firstName: 'Oras',
     lastName: 'Geras',
   };
 
   const personArr: PersonObj[] = [
     {
+      id: 1,
       firstName: 'James',
       lastName: 'Bond',
     },
     {
+      id: 2,
       firstName: 'Bruce',
       lastName: 'Wayne',
     },
     {
+      id: 3,
       firstName: 'Clark',
       lastName: 'Kent',
     },
