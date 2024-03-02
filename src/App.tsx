@@ -8,6 +8,7 @@ import PersonList from './components/PersonList';
 import { PersonObj } from './components/PersonObj.type';
 import Status from './components/Status';
 import Container from './components/Container';
+import LoggedIn from './components/state/LoggedIn';
 
 function App() {
   const personObj: PersonObj = {
@@ -46,19 +47,22 @@ function App() {
     <Container>
       <h1 className='display-2'>React TS App</h1>
       {/* <Heading title='Sveiki' /> */}
-      <Grid>
-        <Heading size={5 || 3}>Dar vienas headingas</Heading>
-        <Button
-          onClick={(event, id) => {
-            console.log('event ===', event.currentTarget, id);
-            printName();
-          }}
-          sumuok={sum}
-        />
-        <Status status='success' />
-      </Grid>
+
+      <LoggedIn />
+
       {false && (
         <>
+          <Grid>
+            <Heading size={5 || 3}>Dar vienas headingas</Heading>
+            <Button
+              onClick={(event, id) => {
+                console.log('event ===', event.currentTarget, id);
+                printName();
+              }}
+              sumuok={sum}
+            />
+            <Status status='success' />
+          </Grid>
           <Person item={personObj} />
           <PersonList list={personArr} />
 
